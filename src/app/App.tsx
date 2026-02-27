@@ -22,6 +22,7 @@ export default function App() {
         <ServicesSection />
         <PostsSection />
         <NewsletterSection />
+
       </main>
       <Footer />
     </div>
