@@ -54,7 +54,7 @@ export function NewsletterSection() {
                 <h2
                   className="text-[#1C1C1E] mb-5"
                   style={{
-                    fontFamily: "'Plus Jakarta Sans', sans-serif",
+                     
                     fontWeight: 800,
                     fontSize: "clamp(1.75rem, 3vw, 2.75rem)",
                     lineHeight: 1.15,
@@ -69,7 +69,7 @@ export function NewsletterSection() {
 
                 <p
                   className="text-[#1C1C1E]/70 mb-8"
-                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "1.0625rem", lineHeight: 1.7 }}
+                  style={{   fontWeight: 400, fontSize: "1.0625rem", lineHeight: 1.7 }}
                 >
                   Every week, I share practical insights, behind-the-scenes
                   experiences from the recruiting world, and ideas to help you
@@ -82,7 +82,7 @@ export function NewsletterSection() {
                     <span
                       key={topic}
                       className="px-4 py-2 bg-white/50 text-[#1C1C1E] rounded-xl border border-white/60 backdrop-blur-sm"
-                      style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 600, fontSize: "0.875rem" }}
+                      style={{   fontWeight: 600, fontSize: "0.875rem" }}
                     >
                       {topic}
                     </span>
@@ -101,13 +101,13 @@ export function NewsletterSection() {
                       <div>
                         <p
                           className="text-[#1C1C1E]"
-                          style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "1rem" }}
+                          style={{   fontWeight: 700, fontSize: "1rem" }}
                         >
                           Join the waitlist
                         </p>
                         <p
                           className="text-[#9CA3AF]"
-                          style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "0.8125rem" }}
+                          style={{   fontWeight: 400, fontSize: "0.8125rem" }}
                         >
                           Be first when it launches
                         </p>
@@ -118,7 +118,7 @@ export function NewsletterSection() {
                       <div>
                         <label
                           className="block text-[#6B7280] mb-2"
-                          style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 500, fontSize: "0.875rem" }}
+                          style={{   fontWeight: 500, fontSize: "0.875rem" }}
                         >
                           Your first name
                         </label>
@@ -126,13 +126,13 @@ export function NewsletterSection() {
                           type="text"
                           placeholder="First name"
                           className="w-full px-4 py-3.5 bg-[#FAFAF8] border-2 border-[#F0F0EE] rounded-xl text-[#1C1C1E] placeholder-[#C4C4C0] focus:outline-none focus:border-[#FFD060] transition-colors"
-                          style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "0.9375rem" }}
+                          style={{   fontWeight: 400, fontSize: "0.9375rem" }}
                         />
                       </div>
                       <div>
                         <label
                           className="block text-[#6B7280] mb-2"
-                          style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 500, fontSize: "0.875rem" }}
+                          style={{   fontWeight: 500, fontSize: "0.875rem" }}
                         >
                           Email address
                         </label>
@@ -143,14 +143,14 @@ export function NewsletterSection() {
                           onChange={(e) => setEmail(e.target.value)}
                           required
                           className="w-full px-4 py-3.5 bg-[#FAFAF8] border-2 border-[#F0F0EE] rounded-xl text-[#1C1C1E] placeholder-[#C4C4C0] focus:outline-none focus:border-[#FFD060] transition-colors"
-                          style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "0.9375rem" }}
+                          style={{   fontWeight: 400, fontSize: "0.9375rem" }}
                         />
                       </div>
                       {/* Submit — dark on white card (inverted from yellow section) */}
                       <button
                         type="submit"
                         className="group w-full flex items-center justify-center gap-2 py-4 bg-[#1C1C1E] text-white rounded-xl hover:bg-[#333] transition-all duration-200 mt-2 hover:shadow-md"
-                        style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "1rem" }}
+                        style={{   fontWeight: 700, fontSize: "1rem" }}
                       >
                         Subscribe — It's free
                         <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -159,7 +159,7 @@ export function NewsletterSection() {
 
                     <p
                       className="text-center text-[#C4C4C0] mt-4"
-                      style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "0.8125rem" }}
+                      style={{   fontWeight: 400, fontSize: "0.8125rem" }}
                     >
                       No spam. Unsubscribe anytime. 🌿
                     </p>
@@ -176,13 +176,13 @@ export function NewsletterSection() {
                     </div>
                     <h3
                       className="text-[#1C1C1E] mb-2"
-                      style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "1.25rem" }}
+                      style={{   fontWeight: 700, fontSize: "1.25rem" }}
                     >
                       You're on the list! 🎉
                     </h3>
                     <p
                       className="text-[#6B7280]"
-                      style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "0.9375rem", lineHeight: 1.65 }}
+                      style={{   fontWeight: 400, fontSize: "0.9375rem", lineHeight: 1.65 }}
                     >
                       Thank you for signing up. I'll notify you as soon as the
                       newsletter launches. Stay curious!
