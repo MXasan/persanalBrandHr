@@ -5,7 +5,6 @@ import { ServicesSection } from "./components/ServicesSection";
 import { PostsSection } from "./components/PostsSection";
 import { NewsletterSection } from "./components/NewsletterSection";
 import { Footer } from "./components/Footer";
-
 const handleScrollTo = (id: string) => {
   const el = document.querySelector(id);
   if (el) el.scrollIntoView({ behavior: "smooth" });
