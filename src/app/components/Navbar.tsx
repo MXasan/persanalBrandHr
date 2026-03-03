@@ -28,9 +28,8 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+        }`}
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
@@ -39,11 +38,10 @@ export function Navbar() {
           className="flex items-center gap-2 group"
         >
           <div className="w-8 h-8 rounded-xl bg-[#FFD060] flex items-center justify-center">
-            <span className="text-[#1C1C1E] text-sm" style={{  fontWeight: 800 }}>A</span>
+            <span className="text-[#1C1C1E] text-sm font-extrabold">A</span>
           </div>
           <span
-            className="text-[#1C1C1E]"
-            style={{  fontWeight: 700, fontSize: "1.05rem" }}
+            className=" font-bold text-[1.05rem] text-[#1C1C1E]"
           >
             Alex Rivera
           </span>
@@ -55,22 +53,19 @@ export function Navbar() {
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="relative text-[#6B7280] hover:text-[#1C1C1E] transition-colors duration-200 pb-1 group"
-              style={{  fontWeight: 500, fontSize: "0.9375rem" }}
+              className="font-medium text-[0.9375rem] relative text-[#6B7280] hover:text-[#1C1C1E] transition-colors duration-200 pb-1 group"
             >
               {link.label}
               {/* Yellow underline indicator */}
               <span
-                className={`absolute -bottom-0.5 left-0 h-[2.5px] rounded-full bg-[#FFD060] transition-all duration-200 ${
-                  activeLink === link.href ? "w-full" : "w-0 group-hover:w-full"
-                }`}
+                className={`absolute -bottom-0.5 left-0 h-[2.5px] rounded-full bg-[#FFD060] transition-all duration-200 ${activeLink === link.href ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
               />
             </button>
           ))}
           <button
             onClick={() => handleNavClick("#services")}
-            className="px-5 py-2.5 bg-[#FFD060] text-[#1C1C1E] rounded-xl hover:bg-[#f5c832] transition-all duration-200 hover:shadow-md hover:-translate-y-px"
-            style={{  fontWeight: 700, fontSize: "0.9375rem" }}
+            className="font-bold text-[0.9375rem] px-5 py-2.5 bg-[#FFD060] text-[#1C1C1E] rounded-xl hover:bg-[#f5c832] transition-all duration-200 hover:shadow-md hover:-translate-y-px"
           >
             Work With Me
           </button>
@@ -92,8 +87,7 @@ export function Navbar() {
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className={`text-left py-2 flex items-center gap-2 ${activeLink === link.href ? "text-[#1C1C1E]" : "text-[#6B7280]"}`}
-              style={{  fontWeight: 500, fontSize: "1rem" }}
+              className={`font-medium text-[1rem] text-left py-2 flex items-center gap-2 ${activeLink === link.href ? "text-[#1C1C1E]" : "text-[#6B7280]"}`}
             >
               {activeLink === link.href && (
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FFD060]" />
@@ -103,8 +97,7 @@ export function Navbar() {
           ))}
           <button
             onClick={() => handleNavClick("#services")}
-            className="w-full py-3 bg-[#FFD060] text-[#1C1C1E] rounded-xl mt-2"
-            style={{  fontWeight: 700 }}
+            className="font-bold w-full bg-[#FFD060] text-[#1C1C1E] rounded-xl mt-2 px-3"
           >
             Work With Me
           </button>
