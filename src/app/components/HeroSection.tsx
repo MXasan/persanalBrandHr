@@ -26,7 +26,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             <Sparkles size={14} className="text-[#D4A017]" />
             <span
               className="text-[#1C1C1E]"
-              style={{  fontWeight: 600, fontSize: "0.875rem" }}
+              style={{ fontWeight: 600, fontSize: "0.875rem" }}
             >
               Senior Technology Talent Partner & Entrepreneur
             </span>
@@ -39,7 +39,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-[#1C1C1E] mb-6"
             style={{
-              
+
               fontWeight: 800,
               fontSize: "clamp(2.5rem, 5vw, 4rem)",
               lineHeight: 1.15,
@@ -54,7 +54,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             <span className="relative inline-block">
               great tech careers.
               {/* Bold yellow highlight underline */}
-              <span className="absolute bottom-1 left-0 right-0 h-[8px] bg-[#FFD060]/70 -z-10 rounded-sm" />
+              <span className="absolute bottom-0 left-0 right-0 h-[8px] bg-[#FFD060]/70 -z-10 rounded-sm" />
             </span>
           </motion.h1>
 
@@ -65,7 +65,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[#6B7280] mb-10 max-w-xl"
             style={{
-              
+
               fontWeight: 400,
               fontSize: "1.1875rem",
               lineHeight: 1.7,
@@ -86,7 +86,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             <button
               onClick={() => onScrollTo("#services")}
               className="group flex items-center gap-2 px-7 py-4 bg-[#FFD060] text-[#1C1C1E] rounded-2xl hover:bg-[#f5c832] transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
-              style={{  fontWeight: 700, fontSize: "1rem" }}
+              style={{ fontWeight: 700, fontSize: "1rem" }}
             >
               Work with me
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -94,7 +94,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             <button
               onClick={() => onScrollTo("#posts")}
               className="flex items-center gap-2 px-7 py-4 bg-white text-[#3B82F6] border-2 border-[#3B82F6]/30 rounded-2xl hover:border-[#3B82F6] hover:bg-[#3B82F6]/5 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5"
-              style={{  fontWeight: 600, fontSize: "1rem" }}
+              style={{ fontWeight: 600, fontSize: "1rem" }}
             >
               Read my posts
             </button>
@@ -116,13 +116,13 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
               <div key={stat.label} className="flex flex-col">
                 <span
                   className="text-[#1C1C1E]"
-                  style={{  fontWeight: 800, fontSize: "1.5rem" }}
+                  style={{ fontWeight: 800, fontSize: "1.5rem" }}
                 >
                   {stat.value}
                 </span>
                 <span
                   className="text-[#9CA3AF]"
-                  style={{  fontWeight: 400, fontSize: "0.8125rem" }}
+                  style={{ fontWeight: 400, fontSize: "0.8125rem" }}
                 >
                   {stat.label}
                 </span>
@@ -153,13 +153,13 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             <div>
               <p
                 className="text-[#1C1C1E]"
-                style={{  fontWeight: 700, fontSize: "0.875rem" }}
+                style={{ fontWeight: 700, fontSize: "0.875rem" }}
               >
                 New Opportunity
               </p>
               <p
                 className="text-[#9CA3AF]"
-                style={{  fontWeight: 400, fontSize: "0.75rem" }}
+                style={{ fontWeight: 400, fontSize: "0.75rem" }}
               >
                 Just matched
               </p>
@@ -167,7 +167,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
           </div>
           <p
             className="text-[#6B7280] mb-4"
-            style={{  fontWeight: 400, fontSize: "0.8125rem", lineHeight: 1.6 }}
+            style={{ fontWeight: 400, fontSize: "0.8125rem", lineHeight: 1.6 }}
           >
             Senior Software Engineer @ Series B Startup — Remote-first, $180k+
           </p>
@@ -187,14 +187,14 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             <span className="text-base">✨</span>
             <p
               className="text-[#1C1C1E]"
-              style={{  fontWeight: 700, fontSize: "0.8125rem" }}
+              style={{ fontWeight: 700, fontSize: "0.8125rem" }}
             >
               Weekly Insight
             </p>
           </div>
           <p
             className="text-[#6B7280]"
-            style={{  fontWeight: 400, fontSize: "0.8125rem", lineHeight: 1.6 }}
+            style={{ fontWeight: 400, fontSize: "0.8125rem", lineHeight: 1.6 }}
           >
             "Your network is your net worth — but your skills are your currency."
           </p>
