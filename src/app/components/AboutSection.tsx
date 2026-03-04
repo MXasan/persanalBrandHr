@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { MapPin, Award, TrendingUp, Users } from "lucide-react";
-
-const PROFILE_IMG =
-  "https://images.unsplash.com/photo-1760543998147-117ae5649c5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHNtaWxpbmclMjBjb25maWRlbnQlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzIwMTk5ODV8MA&ixlib=rb-4.1.0&q=80&w=1080";
+// import ProfileImg from '../../../public/profileImg.jpg'
+// const PROFILE_IMG =
+//   "https://images.unsplash.com/photo-1760543998147-117ae5649c5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHNtaWxpbmclMjBjb25maWRlbnQlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzIwMTk5ODV8MA&ixlib=rb-4.1.0&q=80&w=1080";
 
 const stats = [
   {
@@ -71,11 +71,12 @@ export function AboutSection() {
             className="relative"
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-md">
-              <img
+              {/* <img
                 src={PROFILE_IMG}
                 alt="Nodir Makhkamov"
                 className="w-full h-full object-cover object-top"
-              />
+              /> */}
+              <img src="/profileImg.jpg" alt="Profile" className="w-full h-full object-cover object-top"/>
 
               <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-green-400/20 flex items-center justify-center shrink-0">

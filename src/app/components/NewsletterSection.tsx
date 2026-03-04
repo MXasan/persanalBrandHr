@@ -21,7 +21,6 @@ export function NewsletterSection() {
   };
 
   return (
-    // Ali Abdaal–style: bright yellow background section
     <section id="newsletter" className="bg-[#FAFAF8] py-24">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
@@ -31,58 +30,40 @@ export function NewsletterSection() {
           transition={{ duration: 0.6 }}
           className="relative bg-[#FFD060] rounded-[32px] overflow-hidden"
         >
-          {/* Background decorations — blue and green tints on yellow */}
+          {/* Background decorations */}
           <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-white/20 blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-8 w-64 h-64 rounded-full bg-[#4ADE80]/20 blur-3xl pointer-events-none" />
           <div className="absolute top-1/2 right-1/4 w-48 h-48 rounded-full bg-[#3B82F6]/10 blur-2xl pointer-events-none" />
 
           <div className="relative z-10 px-8 py-16 md:px-16 md:py-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Left */}
+              {/* Left Side */}
               <div>
-                {/* Badge — dark on yellow */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1C1C1E]/10 rounded-full mb-8 border border-[#1C1C1E]/15">
                   <Sparkles size={14} className="text-[#1C1C1E]" />
-                  <span
-                    className="text-[#1C1C1E]"
-                    style={{ fontWeight: 700, fontSize: "0.8125rem" }}
-                  >
+                  <span className="text-[#1C1C1E] font-bold text-[0.8125rem]">
                     Weekly newsletter — coming soon
                   </span>
                 </div>
 
-                <h2
-                  className="text-[#1C1C1E] mb-5"
-                  style={{
-                     
-                    fontWeight: 800,
-                    fontSize: "clamp(1.75rem, 3vw, 2.75rem)",
-                    lineHeight: 1.15,
-                    letterSpacing: "-0.02em",
-                  }}
-                >
+                <h2 className="text-[#1C1C1E] mb-5 font-extrabold text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.15] tracking-[-0.02em]">
                   Get weekly insights on
                   <br />
                   careers, productivity
                   <br />& growth.
                 </h2>
 
-                <p
-                  className="text-[#1C1C1E]/70 mb-8"
-                  style={{   fontWeight: 400, fontSize: "1.0625rem", lineHeight: 1.7 }}
-                >
+                <p className="text-[#1C1C1E]/70 mb-8 font-normal text-[1.0625rem] leading-[1.7]">
                   Every week, I share practical insights, behind-the-scenes
                   experiences from the recruiting world, and ideas to help you
                   do your best work.
                 </p>
 
-                {/* Topics — dark pills on yellow */}
                 <div className="flex flex-wrap gap-2">
                   {topics.map((topic) => (
                     <span
                       key={topic}
-                      className="px-4 py-2 bg-white/50 text-[#1C1C1E] rounded-xl border border-white/60 backdrop-blur-sm"
-                      style={{   fontWeight: 600, fontSize: "0.875rem" }}
+                      className="px-4 py-2 bg-white/50 text-[#1C1C1E] rounded-xl border border-white/60 backdrop-blur-sm font-semibold text-[0.875rem]"
                     >
                       {topic}
                     </span>
@@ -90,7 +71,7 @@ export function NewsletterSection() {
                 </div>
               </div>
 
-              {/* Right: Form — white card on yellow */}
+              {/* Right Side: Form */}
               <div>
                 {!submitted ? (
                   <div className="bg-white rounded-3xl p-8 shadow-xl">
@@ -99,16 +80,10 @@ export function NewsletterSection() {
                         <Mail size={18} className="text-[#D4A017]" />
                       </div>
                       <div>
-                        <p
-                          className="text-[#1C1C1E]"
-                          style={{   fontWeight: 700, fontSize: "1rem" }}
-                        >
+                        <p className="text-[#1C1C1E] font-bold text-base">
                           Join the waitlist
                         </p>
-                        <p
-                          className="text-[#9CA3AF]"
-                          style={{   fontWeight: 400, fontSize: "0.8125rem" }}
-                        >
+                        <p className="text-[#9CA3AF] font-normal text-[0.8125rem]">
                           Be first when it launches
                         </p>
                       </div>
@@ -116,24 +91,17 @@ export function NewsletterSection() {
 
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
-                        <label
-                          className="block text-[#6B7280] mb-2"
-                          style={{   fontWeight: 500, fontSize: "0.875rem" }}
-                        >
+                        <label className="block text-[#6B7280] mb-2 font-medium text-sm">
                           Your first name
                         </label>
                         <input
                           type="text"
                           placeholder="First name"
-                          className="w-full px-4 py-3.5 bg-[#FAFAF8] border-2 border-[#F0F0EE] rounded-xl text-[#1C1C1E] placeholder-[#C4C4C0] focus:outline-none focus:border-[#FFD060] transition-colors"
-                          style={{   fontWeight: 400, fontSize: "0.9375rem" }}
+                          className="w-full px-4 py-3.5 bg-[#FAFAF8] border-2 border-[#F0F0EE] rounded-xl text-[#1C1C1E] placeholder-[#C4C4C0] focus:outline-none focus:border-[#FFD060] transition-colors font-normal text-[0.9375rem]"
                         />
                       </div>
                       <div>
-                        <label
-                          className="block text-[#6B7280] mb-2"
-                          style={{   fontWeight: 500, fontSize: "0.875rem" }}
-                        >
+                        <label className="block text-[#6B7280] mb-2 font-medium text-sm">
                           Email address
                         </label>
                         <input
@@ -142,25 +110,19 @@ export function NewsletterSection() {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           required
-                          className="w-full px-4 py-3.5 bg-[#FAFAF8] border-2 border-[#F0F0EE] rounded-xl text-[#1C1C1E] placeholder-[#C4C4C0] focus:outline-none focus:border-[#FFD060] transition-colors"
-                          style={{   fontWeight: 400, fontSize: "0.9375rem" }}
+                          className="w-full px-4 py-3.5 bg-[#FAFAF8] border-2 border-[#F0F0EE] rounded-xl text-[#1C1C1E] placeholder-[#C4C4C0] focus:outline-none focus:border-[#FFD060] transition-colors font-normal text-[0.9375rem]"
                         />
                       </div>
-                      {/* Submit — dark on white card (inverted from yellow section) */}
                       <button
                         type="submit"
-                        className="group w-full flex items-center justify-center gap-2 py-4 bg-[#1C1C1E] text-white rounded-xl hover:bg-[#333] transition-all duration-200 mt-2 hover:shadow-md"
-                        style={{   fontWeight: 700, fontSize: "1rem" }}
+                        className="group w-full flex items-center justify-center gap-2 py-4 bg-[#1C1C1E] text-white rounded-xl hover:bg-[#333] transition-all duration-200 mt-2 hover:shadow-md font-bold text-base"
                       >
                         Subscribe — It's free
                         <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                       </button>
                     </form>
 
-                    <p
-                      className="text-center text-[#C4C4C0] mt-4"
-                      style={{   fontWeight: 400, fontSize: "0.8125rem" }}
-                    >
+                    <p className="text-center text-[#C4C4C0] mt-4 font-normal text-[0.8125rem]">
                       No spam. Unsubscribe anytime. 🌿
                     </p>
                   </div>
@@ -174,16 +136,10 @@ export function NewsletterSection() {
                     <div className="w-16 h-16 rounded-full bg-[#4ADE80]/20 flex items-center justify-center mb-5">
                       <CheckCircle size={28} className="text-[#16a34a]" />
                     </div>
-                    <h3
-                      className="text-[#1C1C1E] mb-2"
-                      style={{   fontWeight: 700, fontSize: "1.25rem" }}
-                    >
+                    <h3 className="text-[#1C1C1E] mb-2 font-bold text-xl">
                       You're on the list! 🎉
                     </h3>
-                    <p
-                      className="text-[#6B7280]"
-                      style={{   fontWeight: 400, fontSize: "0.9375rem", lineHeight: 1.65 }}
-                    >
+                    <p className="text-[#6B7280] font-normal text-[0.9375rem] leading-[1.65]">
                       Thank you for signing up. I'll notify you as soon as the
                       newsletter launches. Stay curious!
                     </p>
