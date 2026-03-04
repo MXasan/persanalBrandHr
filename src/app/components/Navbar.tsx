@@ -43,7 +43,7 @@ export function Navbar() {
           <span
             className=" font-bold text-[1.05rem] text-[#1C1C1E]"
           >
-            Alex Rivera
+            Nodir Makhkamov
           </span>
         </button>
 

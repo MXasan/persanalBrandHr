@@ -39,7 +39,7 @@ export function Footer() {
                 </span>
               </div>
               <span className="text-neutral-900 font-bold text-[1.0625rem]">
-                Alex Rivera
+                Nodir Makhkamov
               </span>
             </div>
 
@@ -114,7 +114,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-neutral-400 text-sm">
-            © 2026 Alex Rivera. All rights reserved.
+            © 2026 Nodir Makhkamov. All rights reserved.
           </p>
           <p className="text-neutral-400 text-sm">
             Built with ☕ & intention.
