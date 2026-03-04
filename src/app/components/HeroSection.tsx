@@ -6,13 +6,13 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ onScrollTo }: HeroSectionProps) {
-
   const stats = [
     { value: "120+", label: "Companies hired for", accent: "#FFD060" },
     { value: "50+", label: "Talks given", accent: "#3B82F6" },
     { value: "2,400+", label: "Careers transformed", accent: "#4ADE80" },
     { value: "8 yrs", label: "Industry experience", accent: "#FFD060" },
-  ]
+  ];
+
   return (
     <section className="min-h-screen bg-[#FAFAF8] flex items-center relative overflow-hidden pt-20">
       {/* Decorative blobs — yellow & blue */}
@@ -31,10 +31,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFD060]/20 rounded-full mb-8 border border-[#FFD060]/30"
           >
             <Sparkles size={14} className="text-[#D4A017]" />
-            <span
-              className="text-[#1C1C1E]"
-              style={{ fontWeight: 600, fontSize: "0.875rem" }}
-            >
+            <span className="text-[#1C1C1E] font-semibold text-sm">
               Senior Technology Talent Partner & Entrepreneur
             </span>
           </motion.div>
@@ -44,17 +41,9 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-[#1C1C1E] mb-6"
-            style={{
-
-              fontWeight: 800,
-              fontSize: "clamp(2.5rem, 5vw, 4rem)",
-              lineHeight: 1.15,
-              letterSpacing: "-0.02em",
-            }}
+            className="text-[#1C1C1E] mb-6 font-extrabold text-[clamp(2.5rem,5vw,4rem)] leading-[1.15] tracking-[-0.02em]"
           >
-            Hi, I'm{" "}
-            <span className="text-[#3B82F6]">Nodir Makhkamov.</span>
+            Hi, I'm <span className="text-[#3B82F6]">Nodir Makhkamov.</span>
             <br />
             I help people find
             <br />
@@ -70,12 +59,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-[#6B7280] mb-10 max-w-xl"
-            style={{
-              fontWeight: 400,
-              fontSize: "1.1875rem",
-              lineHeight: 1.7,
-            }}
+            className="text-[#6B7280] mb-10 max-w-xl font-normal text-[1.1875rem] leading-[1.7]"
           >
             Helping people find great tech careers & build meaningful work.
             Productivity expert, growth coach, and speaker — passionate about
@@ -91,16 +75,17 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
           >
             <button
               onClick={() => onScrollTo("#services")}
-              className="group flex items-center gap-2 px-7 py-4 bg-[#FFD060] text-[#1C1C1E] rounded-2xl hover:bg-[#f5c832] transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
-              style={{ fontWeight: 700, fontSize: "1rem" }}
+              className="group flex items-center gap-2 px-7 py-4 bg-[#FFD060] text-[#1C1C1E] rounded-2xl hover:bg-[#f5c832] transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 font-bold text-base"
             >
               Work with me
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight
+                size={16}
+                className="group-hover:translate-x-1 transition-transform"
+              />
             </button>
             <button
               onClick={() => onScrollTo("#posts")}
-              className="flex items-center gap-2 px-7 py-4 bg-white text-[#3B82F6] border-2 border-[#3B82F6]/30 rounded-2xl hover:border-[#3B82F6] hover:bg-[#3B82F6]/5 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5"
-              style={{ fontWeight: 600, fontSize: "1rem" }}
+              className="flex items-center gap-2 px-7 py-4 bg-white text-[#3B82F6] border-2 border-[#3B82F6]/30 rounded-2xl hover:border-[#3B82F6] hover:bg-[#3B82F6]/5 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 font-semibold text-base"
             >
               Read my posts
             </button>
@@ -115,19 +100,16 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
           >
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col">
-                <span
-                  className="text-[#1C1C1E]"
-                  style={{ fontWeight: 800, fontSize: "1.5rem" }}
-                >
+                <span className="text-[#1C1C1E] font-extrabold text-2xl">
                   {stat.value}
                 </span>
-                <span
-                  className="text-[#9CA3AF]"
-                  style={{ fontWeight: 400, fontSize: "0.8125rem" }}
-                >
+                <span className="text-[#9CA3AF] font-normal text-[0.8125rem]">
                   {stat.label}
                 </span>
-                <span className="h-[3px] w-8 rounded-full mt-1.5" style={{ backgroundColor: stat.accent }} />
+                <span
+                  className="h-[3px] w-8 rounded-full mt-1.5"
+                  style={{ backgroundColor: stat.accent }}
+                />
               </div>
             ))}
           </motion.div>
@@ -141,10 +123,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2"
       >
-        <div
-          className="w-72 bg-white rounded-3xl p-6 shadow-xl border border-[#F0F0EE]"
-          style={{ transform: "rotate(2deg)" }}
-        >
+        <div className="w-72 bg-white rounded-3xl p-6 shadow-xl border border-[#F0F0EE] rotate-2">
           {/* Yellow top border accent */}
           <div className="absolute top-0 left-6 right-6 h-[3px] bg-[#FFD060] rounded-b-full" />
           <div className="flex items-center gap-3 mb-4">
@@ -152,51 +131,37 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
               <span className="text-lg">🚀</span>
             </div>
             <div>
-              <p
-                className="text-[#1C1C1E]"
-                style={{ fontWeight: 700, fontSize: "0.875rem" }}
-              >
+              <p className="text-[#1C1C1E] font-bold text-sm">
                 New Opportunity
               </p>
-              <p
-                className="text-[#9CA3AF]"
-                style={{ fontWeight: 400, fontSize: "0.75rem" }}
-              >
+              <p className="text-[#9CA3AF] font-normal text-xs">
                 Just matched
               </p>
             </div>
           </div>
-          <p
-            className="text-[#6B7280] mb-4"
-            style={{ fontWeight: 400, fontSize: "0.8125rem", lineHeight: 1.6 }}
-          >
+          <p className="text-[#6B7280] mb-4 font-normal text-[0.8125rem] leading-[1.6]">
             Senior Software Engineer @ Series B Startup — Remote-first, $180k+
           </p>
           <div className="flex gap-2">
-            <span className="px-3 py-1 bg-[#3B82F6]/10 text-[#3B82F6] rounded-full text-xs" style={{ fontWeight: 600 }}>React</span>
-            <span className="px-3 py-1 bg-[#4ADE80]/15 text-[#16a34a] rounded-full text-xs" style={{ fontWeight: 600 }}>Node.js</span>
+            <span className="px-3 py-1 bg-[#3B82F6]/10 text-[#3B82F6] rounded-full text-xs font-semibold">
+              React
+            </span>
+            <span className="px-3 py-1 bg-[#4ADE80]/15 text-[#16a34a] rounded-full text-xs font-semibold">
+              Node.js
+            </span>
           </div>
         </div>
 
-        <div
-          className="w-64 bg-white rounded-3xl p-5 shadow-lg border border-[#F0F0EE] mt-4 ml-8"
-          style={{ transform: "rotate(-1.5deg)" }}
-        >
+        <div className="w-64 bg-white rounded-3xl p-5 shadow-lg border border-[#F0F0EE] mt-4 ml-8 -rotate-[1.5deg]">
           {/* Blue top border accent */}
           <div className="absolute top-0 left-5 right-5 h-[3px] bg-[#3B82F6] rounded-b-full" />
           <div className="flex items-center gap-2 mb-2">
             <span className="text-base">✨</span>
-            <p
-              className="text-[#1C1C1E]"
-              style={{ fontWeight: 700, fontSize: "0.8125rem" }}
-            >
+            <p className="text-[#1C1C1E] font-bold text-[0.8125rem]">
               Weekly Insight
             </p>
           </div>
-          <p
-            className="text-[#6B7280]"
-            style={{ fontWeight: 400, fontSize: "0.8125rem", lineHeight: 1.6 }}
-          >
+          <p className="text-[#6B7280] font-normal text-[0.8125rem] leading-[1.6]">
             "Your network is your net worth — but your skills are your currency."
           </p>
         </div>

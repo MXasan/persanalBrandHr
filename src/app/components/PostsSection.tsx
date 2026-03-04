@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Clock, ArrowRight, BookOpen } from "lucide-react";
+
 const POSTS = [
   {
     id: 1,
@@ -24,7 +25,7 @@ const POSTS = [
   },
   {
     id: 3,
-    title: "From Employee to Entrepreneur: What Nobody Tells You About the Leap",
+    title: "From Entrepreneur to Entrepreneur: What Nobody Tells You About the Leap",
     excerpt: "The jump from a stable salary to building something of your own is terrifying and exhilarating. Here's what I wish I'd known.",
     image: "https://images.unsplash.com/photo-1758873271835-0ab4b611e659?auto=format&fit=crop&q=70&w=600",
     date: "Jan 28, 2026",
@@ -43,6 +44,7 @@ const POSTS = [
     tagLabel: "Growth",
   },
 ];
+
 const TAGS = [
   { id: "all", label: "All Posts" },
   { id: "career", label: "Career" },
@@ -51,18 +53,33 @@ const TAGS = [
   { id: "growth", label: "Growth" },
 ];
 
-const tagColors: Record<string, { bg: string; text: string; border: string }> = {
-  career: { bg: "#3B82F614", text: "#2563EB", border: "#3B82F630" },
-  productivity: { bg: "#FFD06020", text: "#9A7100", border: "#FFD06040" },
-  entrepreneurship: { bg: "#FFD06015", text: "#9A7100", border: "#FFD06030" },
-  growth: { bg: "#4ADE8018", text: "#16a34a", border: "#4ADE8035" },
+// Map tags to Tailwind classes for the Cards
+const tagStyles = {
+  career: {
+    badge: "text-[#2563EB] bg-[#3B82F6]/10 border-[#3B82F6]/20",
+    borderTop: "border-t-[#3B82F6]/60",
+  },
+  productivity: {
+    badge: "text-[#9A7100] bg-[#FFD060]/10 border-[#FFD060]/20",
+    borderTop: "border-t-[#FFD060]/60",
+  },
+  entrepreneurship: {
+    badge: "text-[#9A7100] bg-[#FFD060]/10 border-[#FFD060]/20",
+    borderTop: "border-t-[#FFD060]/60",
+  },
+  growth: {
+    badge: "text-[#16a34a] bg-[#4ADE80]/10 border-[#4ADE80]/20",
+    borderTop: "border-t-[#4ADE80]/60",
+  },
 };
 
-const filterColors: Record<string, string> = {
-  career: "#3B82F6",
-  productivity: "#FFD060",
-  entrepreneurship: "#FFD060",
-  growth: "#4ADE80",
+// Map tags to Tailwind classes for the Filter Buttons
+const filterBtnStyles = {
+  all: "bg-[#FFD060] border-[#FFD060] text-[#1C1C1E]",
+  career: "bg-[#3B82F6] border-[#3B82F6] text-white",
+  productivity: "bg-[#FFD060] border-[#FFD060] text-[#1C1C1E]",
+  entrepreneurship: "bg-[#FFD060] border-[#FFD060] text-[#1C1C1E]",
+  growth: "bg-[#4ADE80] border-[#4ADE80] text-white",
 };
 
 export function PostsSection() {
@@ -108,18 +125,17 @@ export function PostsSection() {
           >
             {TAGS.map((tag) => {
               const isActive = activeTag === tag.id;
-              const accentColor = tag.id === "all" ? "#FFD060" : filterColors[tag.id] || "#FFD060";
+              const activeClasses = filterBtnStyles[tag.id] || filterBtnStyles.all;
+
               return (
                 <button
                   key={tag.id}
                   onClick={() => setActiveTag(tag.id)}
-                  className={`px-4 py-1.5 rounded-full border-2 transition-all duration-200 text-sm ${isActive ? "font-bold" : "font-medium"
+                  className={`px-4 py-1.5 rounded-full border-2 transition-all duration-200 text-sm 
+                    ${isActive
+                      ? `${activeClasses} font-bold`
+                      : "bg-white border-[#E8E8E6] text-[#6B7280] font-medium"
                     }`}
-                  style={{
-                    backgroundColor: isActive ? accentColor : "white",
-                    borderColor: isActive ? accentColor : "#E8E8E6",
-                    color: isActive ? (accentColor === "#FFD060" ? "#1C1C1E" : "white") : "#6B7280",
-                  }}
                 >
                   {tag.label}
                 </button>
@@ -131,7 +147,8 @@ export function PostsSection() {
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((post, idx) => {
-            const tc = tagColors[post.tag] || tagColors.career;
+            const styles = tagStyles[post.tag] || tagStyles.career;
+
             return (
               <motion.article
                 key={post.id}
@@ -139,10 +156,7 @@ export function PostsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: idx * 0.07 }}
-                className="group bg-white rounded-3xl overflow-hidden border-2 border-[#F0F0EE] hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col border-t-[3px]"
-                style={{
-                  borderTopColor: tc.border.replace(/30|35|40/, "60"),
-                }}
+                className={`group bg-white rounded-3xl overflow-hidden border-2 border-[#F0F0EE] hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col border-t-[3px] ${styles.borderTop}`}
               >
                 {/* Cover */}
                 <div className="h-48 overflow-hidden relative">
@@ -152,11 +166,7 @@ export function PostsSection() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span
-                    className="absolute top-4 left-4 px-3 py-1 rounded-full font-bold text-[0.75rem] bg-white/90 backdrop-blur-sm"
-                    style={{
-                      color: tc.text,
-                      border: `1.5px solid ${tc.border}`,
-                    }}
+                    className={`absolute top-4 left-4 px-3 py-1 rounded-full font-bold text-[0.75rem] backdrop-blur-sm border-[1.5px] ${styles.badge}`}
                   >
                     {post.tagLabel}
                   </span>
