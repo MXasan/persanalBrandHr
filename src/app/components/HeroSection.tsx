@@ -6,6 +6,13 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ onScrollTo }: HeroSectionProps) {
+
+  const stats = [
+    { value: "120+", label: "Companies hired for", accent: "#FFD060" },
+    { value: "50+", label: "Talks given", accent: "#3B82F6" },
+    { value: "2,400+", label: "Careers transformed", accent: "#4ADE80" },
+    { value: "8 yrs", label: "Industry experience", accent: "#FFD060" },
+  ]
   return (
     <section className="min-h-screen bg-[#FAFAF8] flex items-center relative overflow-hidden pt-20">
       {/* Decorative blobs — yellow & blue */}
@@ -47,7 +54,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             }}
           >
             Hi, I'm{" "}
-            <span className="text-[#3B82F6]">Alex Rivera.</span>
+            <span className="text-[#3B82F6]">Nodir Makhkamov.</span>
             <br />
             I help people find
             <br />
@@ -65,7 +72,6 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[#6B7280] mb-10 max-w-xl"
             style={{
-
               fontWeight: 400,
               fontSize: "1.1875rem",
               lineHeight: 1.7,
@@ -107,12 +113,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-16 flex flex-wrap items-center gap-8"
           >
-            {[
-              { value: "120+", label: "Companies hired for", accent: "#FFD060" },
-              { value: "50+", label: "Talks given", accent: "#3B82F6" },
-              { value: "2,400+", label: "Careers transformed", accent: "#4ADE80" },
-              { value: "8 yrs", label: "Industry experience", accent: "#FFD060" },
-            ].map((stat) => (
+            {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col">
                 <span
                   className="text-[#1C1C1E]"
