@@ -7,10 +7,10 @@ interface HeroSectionProps {
 
 export function HeroSection({ onScrollTo }: HeroSectionProps) {
   const stats = [
-    { value: "120+", label: "Companies hired for", accent: "#FFD060" },
-    { value: "50+", label: "Talks given", accent: "#3B82F6" },
-    { value: "2,400+", label: "Careers transformed", accent: "#4ADE80" },
-    { value: "8 yrs", label: "Industry experience", accent: "#FFD060" },
+    { value: "10+", label: "Companies hired for", accent: "#FFD060" },
+    { value: "5+", label: "Talks given", accent: "#3B82F6" },
+    { value: "150+", label: "Careers transformed", accent: "#4ADE80" },
+    { value: "2 yrs", label: "Industry experience", accent: "#FFD060" },
   ];
 
   return (
