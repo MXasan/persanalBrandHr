@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Twitter, Linkedin, Instagram, Youtube, ArrowUpRight } from "lucide-react";
+import { Twitter, Linkedin, Youtube, ArrowUpRight } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -11,7 +11,6 @@ const navLinks = [
 const socials = [
   { icon: <Twitter size={18} />, label: "Twitter", href: "#" },
   { icon: <Linkedin size={18} />, label: "LinkedIn", href: "#" },
-  { icon: <Instagram size={18} />, label: "Instagram", href: "#" },
   { icon: <Youtube size={18} />, label: "YouTube", href: "#" },
 ];
 

@@ -38,7 +38,7 @@ export function Navbar() {
           className="flex items-center gap-2 group"
         >
           <div className="w-8 h-8 rounded-xl bg-[#FFD060] flex items-center justify-center">
-            <span className="text-[#1C1C1E] text-sm font-extrabold">A</span>
+            <span className="text-[#1C1C1E] text-sm font-extrabold">NM</span>
           </div>
           <span
             className=" font-bold text-[1.05rem] text-[#1C1C1E]"

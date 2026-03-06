@@ -26,11 +26,11 @@ const stats = [
     accent: "#4ADE80",
   },
   {
-    icon: <MapPin size={18} className="text-blue-500" />,
+    icon: <MapPin size={18} className="text-red-500" />,
     value: "2 yrs",
     label: "In tech talent",
     sub: "Across 3 continents",
-    accent: "#3B82F6",
+    accent: "#ff8080",
   },
 ];
 
@@ -121,7 +121,7 @@ export function AboutSection() {
             </div>
 
             <p className="text-gray-600 mb-5 text-[1.0625rem] leading-relaxed">
-              I've spent the last 8 years at the intersection of technology and
+              I've spent the last 2 years at the intersection of technology and
               human potential — placing exceptional engineers, product managers,
               and data scientists at companies that actually care about their
               people.

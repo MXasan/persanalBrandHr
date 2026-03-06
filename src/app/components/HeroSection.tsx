@@ -10,7 +10,7 @@ export function HeroSection({ onScrollTo }: HeroSectionProps) {
     { value: "10+", label: "Companies hired for", accent: "#FFD060" },
     { value: "5+", label: "Talks given", accent: "#3B82F6" },
     { value: "150+", label: "Careers transformed", accent: "#4ADE80" },
-    { value: "2 yrs", label: "Industry experience", accent: "#FFD060" },
+    { value: "2 yrs", label: "Industry experience", accent: "#ff8080" },
   ];
 
   return (
