@@ -22,20 +22,20 @@ const services = [
   },
   {
     icon: <Briefcase size={22} />,
-    topBorder: "bg-[#FFD060]",
-    iconBg: "bg-[#FFD060]",
-    iconColor: "text-[#1C1C1E]",
+    topBorder: "bg-[#ff8080]",
+    iconBg: "bg-[#ff8080]/10",
+    iconColor: "text-[#ff8080]",
     tag: "Companies",
-    tagBg: "bg-white/10",
-    tagColor: "text-[#FFD060]",
+    tagBg: "bg-[#ff8080]/10",
+    tagColor: "text-[#ff8080]",
     title: "Hire Through Me",
     description:
       "Need world-class engineers, PMs, or data talent? I work with Series A to enterprise companies to find the right people — fast. No spray-and-pray.",
     cta: "Start hiring",
-    ctaBorder: "border-transparent",
-    ctaTextColor: "text-[#1C1C1E]",
-    ctaBg: "bg-[#FFD060] hover:bg-[#f5c832]",
-    highlight: true,
+    ctaBorder: "border-[#ff8080]",
+    ctaTextColor: "text-[#ff8080]",
+    ctaBg: "hover:bg-[#ff8080]/10",
+    highlight: false,
   },
   {
     icon: <Mic size={22} />,
@@ -73,7 +73,7 @@ const services = [
   },
 ];
 
-export function   ServicesSection() {
+export function ServicesSection() {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
@@ -130,10 +130,8 @@ export function   ServicesSection() {
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               onHoverStart={() => setHoveredIdx(idx)}
               onHoverEnd={() => setHoveredIdx(null)}
-              className={`relative rounded-3xl p-6 border flex flex-col cursor-pointer transition-all duration-300 overflow-hidden ${service.highlight
-                  ? "bg-[#1C1C1E] border-[#1C1C1E] text-white shadow-lg"
-                  : "bg-white border-[#F0F0EE] hover:shadow-xl"
-                } ${hoveredIdx === idx ? "-translate-y-2" : ""}`}
+              className={`relative rounded-3xl p-6 border flex flex-col cursor-pointer transition-all duration-300 overflow-hidden 
+                ${hoveredIdx === idx ? "-translate-y-2 bg-[#1C1C1E] border-[#1C1C1E] text-white shadow-lg" : ""}`}
             >
               {/* Colored top border accent */}
               <div className={`absolute top-0 left-0 right-0 h-[4px] ${service.topBorder}`} />
@@ -153,10 +151,10 @@ export function   ServicesSection() {
               </div>
 
               {/* Content */}
-              <h3 className={`mb-3 font-bold text-[1.0625rem] leading-[1.35] ${service.highlight ? "text-white" : "text-[#1C1C1E]"}`}>
+              <h3 className={`mb-3 font-bold text-[1.0625rem] leading-[1.35]`}>
                 {service.title}
               </h3>
-              <p className={`mb-6 flex-1 font-normal text-[0.875rem] leading-[1.7] ${service.highlight ? "text-white/60" : "text-[#6B7280]"}`}>
+              <p className={`mb-6 flex-1 font-normal text-[0.875rem] leading-[1.7]`}>
                 {service.description}
               </p>
 
